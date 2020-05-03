@@ -1,3 +1,7 @@
+# Hash tables have a O(1) look up time
+# Disadvantages are possible high memory requirement, as excess space is usually needed
+# Uses key value pairs
+# Similar to dictionaries in Python
 
 class HashTable:
 
