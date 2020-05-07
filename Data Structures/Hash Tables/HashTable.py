@@ -55,6 +55,8 @@ class HashTable:
             raise KeyError()
 
     def is_full(self):
+        # Determines if the array is the full by calculating the load factor
+        # *Need to make load factor an attribute of the class
         objects = 0
         for obj in self.array:
             if obj is not None:
@@ -65,6 +67,9 @@ class HashTable:
             return True
 
     def double(self):
+        # Doubles the array capacity by creating a new hash table object
+        # and adding each of the key value pairs to the new hash table,
+        # then copying the array attribute back to the old hash table
         ht2 = HashTable(length=len(self.array) * 2)
         for index in self.array:
             if index is not None:
